@@ -163,7 +163,7 @@ public class Aerolinea
      */
     public Vuelo getVuelo( String codigoRuta, String fechaVuelo )
     {
-        // TODO implementar
+        // TODO implementar, dentro del método
         return null;
     }
 
@@ -182,7 +182,7 @@ public class Aerolinea
      */
     public Collection<Tiquete> getTiquetes( )
     {
-        // TODO implementar
+        // TODO implementar, dentro x2
         return null;
 
     }

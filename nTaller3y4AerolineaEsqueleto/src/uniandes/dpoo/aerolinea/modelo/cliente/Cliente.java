@@ -18,7 +18,7 @@ public abstract class Cliente {
 
 	public String getIdentificador() {
 		// TODO Auto-generated method stub
-		return null;
+		;
 	}
 	
 	public void agregarTiquete(Tiquete tiquete) {

@@ -15,12 +15,14 @@ public class ClienteNatural extends Cliente
     	this.nombre= nombre;
     }
     
-    @Override
+    
     public String getIdentificador () {
-    	
+    	super.getIdentificador();
     }
     
     public String getTipoCliente () {
-    	
+    	/*
+    	 * not sure xd
+    	 */
     }
 }
