@@ -32,12 +32,13 @@ public class ClienteCorporativo extends Cliente
     	 * if 1: grande, else if 2:mediana, else if 3: pequeña
     	return 
     	 */
- 
+    	return "idk by the moment";
     }
     
     public String getIdentificador() {
-    	super.getIdentificador();
+    	return super.getIdentificador();
     }
+    
     /**
      * Crea un nuevo objeto de tipo a partir de un objeto JSON.
      * 

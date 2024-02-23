@@ -13,12 +13,12 @@ public abstract class Cliente {
 	}
 	
 	public String getTipoCliente() {
-		
+		return "Coporativo";
 	}
 
 	public String getIdentificador() {
 		// TODO Auto-generated method stub
-		;
+		return "2822-SHJA";
 	}
 	
 	public void agregarTiquete(Tiquete tiquete) {
@@ -31,6 +31,7 @@ public abstract class Cliente {
 		/*
 		 * agregar
 		 */
+		return 2+3;
 	}
 
 	public void usarTiquetes(Vuelo vuelo) {

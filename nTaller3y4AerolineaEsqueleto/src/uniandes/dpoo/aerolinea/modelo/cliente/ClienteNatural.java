@@ -17,12 +17,14 @@ public class ClienteNatural extends Cliente
     
     
     public String getIdentificador () {
-    	super.getIdentificador();
+    	return super.getIdentificador();
     }
     
+    @Override
     public String getTipoCliente () {
     	/*
     	 * not sure xd
     	 */
+    	return nombre + "Natural";
     }
 }
