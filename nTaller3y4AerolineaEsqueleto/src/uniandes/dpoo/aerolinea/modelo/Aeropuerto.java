@@ -14,17 +14,11 @@ public class Aeropuerto
 {
     // TODO completar
     private String nombre;
-    
     private String codigo;
-    
     private String nombreCiudad;
-    
     private double latitud;
-    
     private double longitud;
-    
     private static Set<String> codigosUtilizados= new HashSet<String>();
-    
     private static int RADIO_TERRESTRE= 6371;
     
     public Aeropuerto(String nombre, String codigo, String nombreCiudad, double latitud, double longitud) {

@@ -41,8 +41,13 @@ public class Vuelo {
 		/*
 		 * arreglar xd
 		 */
+		
 		Collection<Tiquete> tiquetes= new Collection<Tiquete>();
 		return tiquetes;
 	}
 
+	public int venderTiquetes(Cliente cliente, Calculadora Tarifas calculadora, int cantidad)´
+	}
+	
+	
 }
