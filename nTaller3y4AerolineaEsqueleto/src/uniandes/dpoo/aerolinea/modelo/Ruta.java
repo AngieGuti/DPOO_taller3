@@ -45,10 +45,16 @@ public class Ruta{
 	}
 	
 	public int getDuracion() {
-		/*
-		 * TODO hacer calculos entre hora llegada menos hora salida
-		 */
+		
+		String [] horaSalida= this.horaSalida.split(":");
+		String [] horaLlegada= this.horaLlegada.split(":");
+		int horasTransformadasSalida= Integer.parseInt(horaSalida[0]) * 60;
+		int minutosTotalesSalida= Integer.parseInt(horaSalida[1]) + horasTransformadasSalida;
+		int horasTransformadasLlegada= Integer.parseInt(horaLlegada[0]) * 60;
+		int minutosTotalesLlegada= Integer.parseInt(horaLlegada[1]) + horasTransformadasLlegada;
+		return minutosTotalesSalida - minutosTotalesLlegada;
 	}
+	
     /**
      * Dada una cadena con una hora y minutos, retorna los minutos.
      * 

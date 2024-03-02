@@ -46,8 +46,10 @@ public class Vuelo {
 		return tiquetes;
 	}
 
-	public int venderTiquetes(Cliente cliente, Calculadora Tarifas calculadora, int cantidad)´
+	public int venderTiquetes(Cliente cliente, Calculadora Tarifas calculadora, int cantidad) {
 	}
 	
-	
+	public boolean equals(Object obj) {
+		
+	}
 }

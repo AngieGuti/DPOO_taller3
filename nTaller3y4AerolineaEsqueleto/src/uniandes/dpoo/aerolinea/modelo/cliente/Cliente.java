@@ -12,11 +12,11 @@ public abstract class Cliente {
 		
 	}
 	
-	public String getTipoCliente() {
+	public abstract String getTipoCliente() {
 		return "Coporativo";
 	}
 
-	public String getIdentificador() {
+	public abstractString getIdentificador() {
 		// TODO Auto-generated method stub
 		return "2822-SHJA";
 	}
