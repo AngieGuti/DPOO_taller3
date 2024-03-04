@@ -47,18 +47,6 @@ public class Tiquete {
 			return this.usado;
 		}
 
-		@Override
-		public void cargarTiquetes(String archivo, Aerolinea aerolinea)
-				throws IOException, InformacionInconsistenteException {
-			// TODO Auto-generated method stub
-			
-		}
-
-		@Override
-		public void salvarTiquetes(String archivo, Aerolinea aerolinea) throws IOException {
-			// TODO Auto-generated method stub
-			
-		}
 }
 
 

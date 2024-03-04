@@ -1,6 +1,5 @@
 package uniandes.dpoo.aerolinea.modelo.cliente;
 
-import org.json.JSONObject;
 
 /**
  * Esta clase se usa para representar a los clientes de la aerolínea que son empresas
@@ -17,14 +16,10 @@ public class ClienteNatural extends Cliente
     
     
     public String getIdentificador () {
-    	return super.getIdentificador();
+    	return this.nombre;
     }
     
-    @Override
     public String getTipoCliente () {
-    	/*
-    	 * not sure xd
-    	 */
-    	return nombre + "Natural";
+        return NATURAL;
     }
 }

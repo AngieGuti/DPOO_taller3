@@ -70,6 +70,14 @@ public class Vuelo {
 	}
 	
 	public boolean equals(Object obj) {
-		
+	if (obj instanceof Vuelo) {
+		Vuelo vuelo = (Vuelo) obj;
+		return vuelo.getRuta().equals(ruta) && vuelo.getFecha().equals(fecha);
 	}
+	return false;
+	}
+	
+	@Override
+	public int hashCode() {
+		return ruta.hashCode() + fecha.hashCode();
 }

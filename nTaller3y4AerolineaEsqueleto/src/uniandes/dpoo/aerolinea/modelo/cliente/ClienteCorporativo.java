@@ -8,9 +8,9 @@ import org.json.JSONObject;
 public class ClienteCorporativo extends Cliente
 {
     public String CORPORATIVO= "Corporativo";
-    public int GRANDE=1;
-    public int MEDIANA=2;
-    public int PEQUEÑA=3;
+    public static int GRANDE=1;
+    public static int MEDIANA=2;
+    public static int PEQUEÑA=3;
     private String nombreEmpresa;
     private int tamanoEmpresa;
     
@@ -28,15 +28,11 @@ public class ClienteCorporativo extends Cliente
     }
     
     public String getTipoCliente() {
-    	/*
-    	 * if 1: grande, else if 2:mediana, else if 3: pequeña
-    	return 
-    	 */
-    	return "idk by the moment";
+    	return CORPORATIVO;
     }
     
     public String getIdentificador() {
-    	return super.getIdentificador();
+    	return nombreEmpresa;
     }
     
     /**
