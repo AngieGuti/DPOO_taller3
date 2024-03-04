@@ -22,7 +22,6 @@ public class Ruta{
 		this.codigoRuta= codigoRuta;
 	}
 
-    // TODO completar
 
 	public String getCodigoRuta() {
 		return this.codigoRuta;
@@ -64,8 +63,7 @@ public class Ruta{
      */
     public static int getMinutos( String horaCompleta )
     {
-        int minutos = Integer.parseInt( horaCompleta ) % 100;
-        return minutos;
+        return Integer.parseInt( horaCompleta ) % 100;
     }
 
     /**
@@ -77,8 +75,7 @@ public class Ruta{
      */
     public static int getHoras( String horaCompleta )
     {
-        int horas = Integer.parseInt( horaCompleta ) / 100;
-        return horas;
+        return Integer.parseInt( horaCompleta ) / 100;
     }
 
     

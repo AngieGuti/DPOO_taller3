@@ -12,21 +12,24 @@ import uniandes.dpoo.aerolinea.exceptions.AeropuertoDuplicadoException;
  */
 public class Aeropuerto
 {
-    // TODO completar
-    private String nombre;
     private String codigo;
+    private static Set<String> codigosUtilizados= new HashSet<String>();
+    private String nombre;
     private String nombreCiudad;
     private double latitud;
     private double longitud;
-    private static Set<String> codigosUtilizados= new HashSet<String>();
     private static int RADIO_TERRESTRE= 6371;
     
-    public Aeropuerto(String nombre, String codigo, String nombreCiudad, double latitud, double longitud) {
+    public Aeropuerto(String nombre, String codigo, String nombreCiudad, double latitud, double longitud) throws AeropuertoDuplicadoException {
     	this.nombre= nombre;
     	this.codigo= codigo;
     	this.nombreCiudad= nombreCiudad;
     	this.latitud= latitud;
     	this.longitud= longitud;
+    	if(codigosUtilizados.contains(codigo)) {
+    		throw new AeropuertoDuplicadoException(codigo);
+    	}
+    	Aeropuerto.codigosUtilizados.add(codigo);
     }
     
     public String getNombre() {
