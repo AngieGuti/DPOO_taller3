@@ -1,42 +1,41 @@
 package uniandes.dpoo.aerolinea.modelo.cliente;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import uniandes.dpoo.aerolinea.modelo.Vuelo;
 import uniandes.dpoo.aerolinea.tiquetes.Tiquete;
 
 public abstract class Cliente {
 
-	/**
-	 * 
-	 */
-	public Cliente() {
-		
+	private List<Tiquete> tiquetesSinUsar= new ArrayList<>();
+	private List<Tiquete> tiquetesUsados= new ArrayList<>();
+	
+	public Cliente() {	
 	}
 	
-	public abstract String getTipoCliente() {
-		return "Coporativo";
-	}
+	public abstract String getTipoCliente();
 
-	public abstractString getIdentificador() {
-		// TODO Auto-generated method stub
-		return "2822-SHJA";
-	}
+	public abstract String getIdentificador();
 	
 	public void agregarTiquete(Tiquete tiquete) {
-		/*
-		 * agregar
-		 */
+		tiquetesSinUsar.add(tiquete);
 	}
 
 	public int calcularValorTotalTiquetes() {
-		/*
-		 * agregar
-		 */
-		return 2+3;
+		int totalTiquetes= 0;
+		for(Tiquete tiquete: tiquetesSinUsar) {
+			totalTiquetes+= tiquete.getTarifa();
+		}
+		return totalTiquetes;
 	}
 
 	public void usarTiquetes(Vuelo vuelo) {
-		/*
-		 * agregar x3
-		 */
+		vuelo.getTiquetes().forEach(tiquete ->{
+			if(tiquetesSinUsar.contains(tiquete)) {
+				tiquetesSinUsar.remove(tiquete);
+				tiquetesUsados.add(tiquete);
+			}
+		});
 	}
 }
